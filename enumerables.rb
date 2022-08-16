@@ -34,8 +34,8 @@ end
 # "hello" * 3 == "hellohellohello"
 def print_spicy_foods(spicy_foods)
   # your code here
-  spicy_foods.find do |food| 
-    food[:cuisine] == cuisine
+  spicy_foods.each do |food|
+    puts "#{food[:name]} (#{food[:cuisine]}) | Heat Level: #{'🌶' * food[:heat_level]}"
   end
 
 end
@@ -58,6 +58,9 @@ end
 # HINT: Try to use methods you've already written to solve this!
 def print_spiciest_foods(spicy_foods)
   # your code here
+  spicy_foods.each do |food|
+    puts "#{food[:name]} (#{food[:cuisine]}) | Heat Level: #{'🌶' * food[:heat_level]}"
+  end
 end
 
 # given an array of spicy foods, return an integer representing 
